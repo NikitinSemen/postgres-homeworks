@@ -14,12 +14,11 @@ CREATE TABLE employees
 	birth_date date,
 	notes text
 );
-CREATE TABLE employees
+CREATE TABLE orders
 (
-	employee_id int PRIMARY KEY,
-	first_name varchar(100),
-	last_name varchar(100),
-	title varchar(100),
-	birth_date date,
-	notes text
-);
+	order_id int NOT NULL,
+	customer_id varchar(10),
+	employee_id int NOT NULL,
+	order_date date,
+	ship_city varchar(50)
+)
