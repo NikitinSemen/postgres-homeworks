@@ -21,9 +21,11 @@ ALTER TABLE student RENAME birthday TO birth_date
 ALTER TABLE student ALTER COLUMN phone SET DATA TYPE varchar(32)
 
 -- 6. Вставить три любых записи с автогенерацией идентификатора
-INSERT INTO student VALUES('1','Michael', 'John', '12.12.1991', '54666565146541651');
-INSERT INTO student VALUES('2','John', 'Michael', '10.11.1914', '5466656514454654');
-INSERT INTO student VALUES('3','Mich', 'Joh', '12.01.1994', '54666515146541651');
+INSERT INTO student (first_name, last_name, birthday, phone)
+VALUES ('Georgy', 'Gurov', '15.12.2001', '65665845516854'),
+('Michael', 'John', '12.12.1991', '54666565146541651'),
+('John', 'Michael', '10.11.1914', '5466656514454654'),
+('Mich', 'Joh', '12.01.1994', '54666515146541651');
 
 -- 7. Удалить все данные из таблицы со сбросом идентификатор в исходное состояние
 TRUNCATE TABLE student RESTART IDENTITY
